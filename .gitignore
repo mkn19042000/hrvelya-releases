@@ -1,6 +1,12 @@
-# Signing material must never be committed. The keystore lives outside every
-# repository, at E:/DEmo/hrvelya-signing/, and losing it means these apps can
-# never be updated again.
+# The built APKs are attached to GitHub Releases by CI, not committed. Binaries in git are
+# never garbage collected: every build would stay in the repository's history forever, and a
+# clone would grow by ~10MB per release for files nobody reads from there anyway.
+releases/*.apk
+
+# Signing material must never be committed. The keystore lives outside every repository, and
+# losing it means these apps can never be updated again.
 *.jks
 *.keystore
+*.b64
+*.b64.txt
 keystore.properties
