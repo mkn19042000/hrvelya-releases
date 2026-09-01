@@ -1,0 +1,6 @@
+# Signing material must never be committed. The keystore lives outside every
+# repository, at E:/DEmo/hrvelya-signing/, and losing it means these apps can
+# never be updated again.
+*.jks
+*.keystore
+keystore.properties
